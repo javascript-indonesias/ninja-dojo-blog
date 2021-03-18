@@ -1,0 +1,7 @@
+/* Global Style letakkan di style.css */
+/* Kemudian import di main.js file */
+body {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    background: #f2f2f2;
+}
