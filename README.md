@@ -2,7 +2,7 @@
 
 ![Alt Image](https://raw.githubusercontent.com/javascript-indonesias/ninja-project-planner/master/demo_app.png)
 
-Aplikasi sederhana membuat Blog Dojo Vue JS 3 dari course Net Ninja Udemy. Di dalam project ini menggunakan JSON Server untuk simulasi mockup data dari server. Karena itu jalankan dulu JSON Server nya, kemudian jalankan project tampilan front end nya dengan NPM script yang ada di file package.json.
+Aplikasi sederhana membuat Blog Dojo Vue JS 3 dari course Net Ninja Udemy menggunakan Composition API. Di dalam project ini menggunakan JSON Server untuk simulasi mockup data dari server. Karena itu jalankan dulu JSON Server nya, kemudian jalankan project tampilan front end nya dengan NPM script yang ada di file package.json.
 
 Aplikasi Vue JS latihan dari course Udemy Net Ninja untuk latihan Composition API [https://www.udemy.com/course/build-web-apps-with-vuejs-firebase/](https://www.udemy.com/course/build-web-apps-with-vuejs-firebase/)
 
