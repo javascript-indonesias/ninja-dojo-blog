@@ -7,11 +7,25 @@ const HomepageComponent = () => import(/* webpackChunkName: "about" */ '../views
 const HomeComponent = () => import(/* webpackChunkName: "about" */ '../views/Home.vue');
 const AboutComponent = () => import(/* webpackChunkName: "about" */ '../views/About.vue');
 
+const ReactiveValueComponent = () => import('../views/ReactiveValues.vue');
+
+const ComputedComponent = () => import('../views/ComputedValues.vue');
+
 const routes = [
     {
         path: '/',
         name: 'Homepage',
         component: HomepageComponent,
+    },
+    {
+        path: '/computed',
+        name: 'ComputedComponents',
+        component: ComputedComponent,
+    },
+    {
+        path: '/reactive-value',
+        name: 'ReactiveComponents',
+        component: ReactiveValueComponent,
     },
     {
         path: '/home',
