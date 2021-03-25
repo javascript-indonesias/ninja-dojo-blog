@@ -14,11 +14,12 @@
         <div v-for="name in listNamaResult" :key="name">
             {{ name }}
         </div>
+        <button @click="handleClickStopWatch()">Stop Watching</button>
     </div>
 </template>
 
 <script>
-import { computed, ref } from 'vue';
+import { computed, ref, watch, watchEffect } from 'vue';
 
 export default {
     name: 'ComputedComponent',
@@ -40,7 +41,30 @@ export default {
             return filteredNama;
         });
 
-        return { nameComputed, nameRef, listNamaRef, searchString, listNamaResult };
+        // Menggunakan Watch watcher
+        const stopWatch = watch(searchString, (newVal, oldVal) => {
+            console.log('new value', newVal, 'old value', oldVal);
+        });
+
+        // Berjalan pertama kali saat component di mount
+        const stopWatchEffect = watchEffect(() => {
+            // otomatis memantau value refs yang ada di dalam fungsi callback watchEffect
+            console.log('fungsi watch effect jalan', searchString.value);
+        });
+
+        const handleClickStopWatch = () => {
+            stopWatch();
+            stopWatchEffect();
+        };
+
+        return {
+            nameComputed,
+            nameRef,
+            listNamaRef,
+            searchString,
+            listNamaResult,
+            handleClickStopWatch,
+        };
     },
 };
 </script>
