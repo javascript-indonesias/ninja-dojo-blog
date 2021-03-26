@@ -11,11 +11,19 @@ const ReactiveValueComponent = () => import('../views/ReactiveValues.vue');
 
 const ComputedComponent = () => import('../views/ComputedValues.vue');
 
+const PropsComposeComponent = () =>
+    import(/* webpackChunkName: "propcompose" */ '../views/PropsComposite.vue');
+
 const routes = [
     {
         path: '/',
         name: 'Homepage',
         component: HomepageComponent,
+    },
+    {
+        path: '/props-compose',
+        name: 'PropsComposition',
+        component: PropsComposeComponent,
     },
     {
         path: '/computed',
