@@ -1,7 +1,13 @@
 <template>
     <div class="home">
         <h1>Home</h1>
-        <post-list :posts="posts"></post-list>
+        <post-list :posts="posts" v-if="isPostShow"></post-list>
+        <div>
+            <button @click="togglePost()">Toggle Post</button>
+        </div>
+        <div>
+            <button @click="removePostOne()">Remove Post One</button>
+        </div>
     </div>
 </template>
 
@@ -31,7 +37,17 @@ export default {
             },
         ]);
 
-        return { posts };
+        const isPostShow = ref(true);
+
+        const togglePost = () => {
+            isPostShow.value = !isPostShow.value;
+        };
+
+        const removePostOne = () => {
+            posts.value.pop();
+        };
+
+        return { posts, isPostShow, togglePost, removePostOne };
     },
 };
 </script>

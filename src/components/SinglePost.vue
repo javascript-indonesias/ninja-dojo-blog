@@ -18,9 +18,11 @@ export default {
         },
     },
     setup(props) {
+        // Menggunakan props dengan cara menambahkan parameter props di setup function
         const snippetParagraf = computed(() => {
             return `${props.post.body.substring(0, 100)}...`;
         });
+
         return { snippetParagraf };
     },
 };
