@@ -14,9 +14,16 @@ const ComputedComponent = () => import('../views/ComputedValues.vue');
 const PropsComposeComponent = () =>
     import(/* webpackChunkName: "propcompose" */ '../views/PropsComposite.vue');
 
+const HomeBlogComponent = () => import('../views/HomeBlog.vue');
+
 const routes = [
     {
         path: '/',
+        name: 'HomeBlog',
+        component: HomeBlogComponent,
+    },
+    {
+        path: '/homepages',
         name: 'Homepage',
         component: HomepageComponent,
     },
@@ -48,7 +55,7 @@ const routes = [
     {
         path: '/:catchAll(.*)',
         name: 'NotFound',
-        redirect: { name: 'Homepage' },
+        redirect: { name: 'HomeBlog' },
     },
 ];
 
