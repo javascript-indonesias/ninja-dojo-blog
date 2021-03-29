@@ -20,6 +20,7 @@
 
 <script>
 import { ref, defineAsyncComponent, onMounted } from 'vue';
+import getPostsData from '../composables/getPostData';
 
 const PostListComponent = defineAsyncComponent(() => import('../components/PostList.vue'));
 
@@ -29,31 +30,10 @@ export default {
         'post-list': PostListComponent,
     },
     setup() {
-        const posts = ref([]);
-        const errorReq = ref(null);
         const isPostShow = ref(true);
 
-        const getDataBlog = async () => {
-            try {
-                const response = await fetch('http://localhost:3000/posts', {
-                    method: 'GET',
-                    headers: {
-                        'Content-Type': 'application/json;charset=utf-8',
-                    },
-                });
-
-                if (response.status === 200) {
-                    const datajson = await response.json();
-                    console.log(datajson);
-                    posts.value = datajson;
-                } else {
-                    throw new Error(`Data tidak tersedia ${response.status}`);
-                }
-            } catch (err) {
-                errorReq.value = err.message;
-                console.warn(errorReq.value);
-            }
-        };
+        // Menggunakan destructuring untuk ambil data ref dan func
+        const { getDataBlog, posts, errorReq } = getPostsData();
 
         const togglePost = () => {
             isPostShow.value = !isPostShow.value;

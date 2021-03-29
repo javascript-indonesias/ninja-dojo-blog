@@ -19,6 +19,16 @@
                 "webdev",
                 "coding"
             ]
+        },
+        {
+            "id": 3,
+            "title": "top 5 JavaScript tips",
+            "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "tags": [
+                "css",
+                "webdev",
+                "coding"
+            ]
         }
     ]
 }
