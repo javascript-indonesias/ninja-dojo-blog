@@ -2,6 +2,7 @@
   "name": "blogsdojo",
   "version": "0.1.0",
   "private": true,
+  "description": "Aplikasi latihan menggunakan Composition API dari Net Ninja Udemy",
   "homepage": "https://github.com/iamshaunjp/Vue-3-Firebase",
   "scripts": {
     "serve": "vue-cli-service serve",
