@@ -16,11 +16,20 @@ const PropsComposeComponent = () =>
 
 const HomeBlogComponent = () => import('../views/HomeBlog.vue');
 
+const DetailBlogComponent = () =>
+    import(/* webpackChunkName: "detailblogs" */ '../views/BlogDetails.vue');
+
 const routes = [
     {
         path: '/',
         name: 'HomeBlog',
         component: HomeBlogComponent,
+    },
+    {
+        path: '/posts/:id',
+        name: 'DetailBlog',
+        component: DetailBlogComponent,
+        props: true,
     },
     {
         path: '/homepages',

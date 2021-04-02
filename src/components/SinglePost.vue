@@ -1,6 +1,8 @@
 <template>
     <div class="post">
-        <h3>{{ post.title }}</h3>
+        <router-link :to="{ name: 'DetailBlog', params: { id: post.id } }">
+            <h3>{{ post.title }}</h3>
+        </router-link>
         <p>{{ snippetParagraf }}</p>
         <span v-for="tag in postTags" :key="tag"> #{{ tag }} </span>
     </div>
