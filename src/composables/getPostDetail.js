@@ -7,6 +7,13 @@ function getPostDetail(idpost) {
     // Ambil data post untuk detail
     const getSinglePost = async () => {
         try {
+            // Beri jeda sementara waktu
+            await new Promise((resolve) => {
+                setTimeout(() => {
+                    resolve(true);
+                }, 2500);
+            });
+
             const response = await fetch(`http://localhost:3000/posts/${idpost}`, {
                 method: 'GET',
                 headers: {

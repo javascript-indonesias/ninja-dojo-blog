@@ -4,11 +4,16 @@
         <h3>{{ post.title }}</h3>
         <p class="pre">{{ post.body }}</p>
     </div>
+    <div v-else>
+        <spinner></spinner>
+    </div>
 </template>
 
 <script>
-import { onMounted } from 'vue';
+import { onMounted, defineAsyncComponent } from 'vue';
 import getPostDetail from '../composables/getPostDetail';
+
+const SpinnerComponent = defineAsyncComponent(() => import('../components/Spinner.vue'));
 
 export default {
     props: {
@@ -16,6 +21,9 @@ export default {
             type: String,
             default: '0',
         },
+    },
+    components: {
+        spinner: SpinnerComponent,
     },
     setup(props) {
         const { getSinglePost, post, errorReq } = getPostDetail(props.id);

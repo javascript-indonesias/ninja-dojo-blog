@@ -6,6 +6,13 @@ const getPostsData = () => {
 
     const getDataBlog = async () => {
         try {
+            // Beri jeda sementara waktu
+            await new Promise((resolve) => {
+                setTimeout(() => {
+                    resolve(true);
+                }, 2500);
+            });
+
             const response = await fetch('http://localhost:3000/posts', {
                 method: 'GET',
                 headers: {

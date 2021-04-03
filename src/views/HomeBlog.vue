@@ -6,7 +6,7 @@
             <post-list :posts="posts" v-if="isPostShow"></post-list>
         </div>
         <div v-else>
-            Memuat halaman...
+            <spinners></spinners>
         </div>
 
         <div v-if="false">
@@ -24,10 +24,13 @@ import getPostsData from '../composables/getPostData';
 
 const PostListComponent = defineAsyncComponent(() => import('../components/PostList.vue'));
 
+const SpinnerComponent = defineAsyncComponent(() => import('../components/Spinner.vue'));
+
 export default {
     name: 'PropsComposition',
     components: {
         'post-list': PostListComponent,
+        spinners: SpinnerComponent,
     },
     setup() {
         const isPostShow = ref(true);
