@@ -19,6 +19,8 @@ const HomeBlogComponent = () => import('../views/HomeBlog.vue');
 const DetailBlogComponent = () =>
     import(/* webpackChunkName: "detailblogs" */ '../views/BlogDetails.vue');
 
+const CreatePostComponent = () => import('../views/CreatePost.vue');
+
 const routes = [
     {
         path: '/',
@@ -30,6 +32,11 @@ const routes = [
         name: 'DetailBlog',
         component: DetailBlogComponent,
         props: true,
+    },
+    {
+        path: '/create',
+        name: 'CreatePost',
+        component: CreatePostComponent,
     },
     {
         path: '/homepages',
