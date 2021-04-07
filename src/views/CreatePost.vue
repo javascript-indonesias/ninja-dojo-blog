@@ -1,6 +1,6 @@
 <template>
     <div class="create">
-        <form action="">
+        <form @submit.prevent="sendSubmitDataBlog()">
             <label for="inputTitle">Title</label>
             <input
                 type="text"
@@ -39,6 +39,7 @@
 
 <script>
 import { ref } from 'vue';
+import postCreateBlog from '../composables/postCreateBlog';
 
 export default {
     name: 'CreatePost',
@@ -47,6 +48,8 @@ export default {
         const stringBody = ref('');
         const stringTag = ref('');
         const listTags = ref([]);
+
+        const { isRequestSucceed, errorReq, sendBlogPost } = postCreateBlog();
 
         // https://www.samanthaming.com/tidbits/81-how-to-check-if-array-includes-a-value/
         const addTagPost = () => {
@@ -59,7 +62,35 @@ export default {
             stringTag.value = '';
         };
 
-        return { stringTitle, stringBody, stringTag, listTags, addTagPost };
+        const sendSubmitDataBlog = async () => {
+            const postData = {
+                title: stringTitle.value,
+                body: stringBody.value,
+                tags: listTags.value,
+            };
+
+            // Kirim data ke server, dengan Composables
+            // Composition API
+            await sendBlogPost(postData);
+
+            if (isRequestSucceed.value) {
+                console.log('Request telah sukses');
+            } else {
+                console.log(`Terjadi error request ${errorReq.value}`);
+            }
+        };
+
+        return {
+            stringTitle,
+            stringBody,
+            stringTag,
+            listTags,
+            addTagPost,
+            sendSubmitDataBlog,
+            isRequestSucceed,
+            errorReq,
+            sendBlogPost,
+        };
     },
 };
 </script>

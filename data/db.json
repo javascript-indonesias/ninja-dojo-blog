@@ -1,34 +1,103 @@
 {
-    "posts": [
-        {
-            "id": 1,
-            "title": "welcome to the new blog",
-            "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-            "tags": [
-                "webdev",
-                "coding",
-                "news"
-            ]
-        },
-        {
-            "id": 2,
-            "title": "top 5 CSS tips",
-            "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-            "tags": [
-                "css",
-                "webdev",
-                "coding"
-            ]
-        },
-        {
-            "id": 3,
-            "title": "top 5 JavaScript tips",
-            "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-            "tags": [
-                "css",
-                "webdev",
-                "coding"
-            ]
-        }
-    ]
+  "posts": [
+    {
+      "id": 1,
+      "title": "welcome to the new blog",
+      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "tags": [
+        "webdev",
+        "coding",
+        "news"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "top 5 CSS tips",
+      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "tags": [
+        "css",
+        "webdev",
+        "coding"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "top 5 JavaScript tips",
+      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "tags": [
+        "css",
+        "webdev",
+        "coding"
+      ]
+    },
+    {
+      "title": "Judul blog",
+      "body": "asdadsada asdasdasdas adasdasdasd asdadasd adadasd adasdasdasd asdadasd adasdasd asdasdasdasd adadad adadasdasd asdasdas asdadasd",
+      "tags": [
+        "adaapa",
+        "kenapa",
+        "dandimana"
+      ],
+      "id": 4
+    },
+    {
+      "title": "asdasdasd",
+      "body": "asdasdasdas adsasdas asdasdasd",
+      "tags": [
+        "asd",
+        "ssss",
+        "ffff"
+      ],
+      "id": 5
+    },
+    {
+      "title": "asdadasd",
+      "body": "asdasdasdasdasdasdasd",
+      "tags": [
+        "hgjgh"
+      ],
+      "id": 6
+    },
+    {
+      "title": "asdasda",
+      "body": "asdasdasd asdasdas",
+      "tags": [
+        "ddd"
+      ],
+      "id": 7
+    },
+    {
+      "title": "aasdasdasda ",
+      "body": "asdasdasd asdasdas asdasdasd",
+      "tags": [
+        "aass"
+      ],
+      "id": 8
+    },
+    {
+      "title": "dfgfdgdfg",
+      "body": "dfgfdgd dfgdfgdf dfgdfgdfg",
+      "tags": [
+        "gggg"
+      ],
+      "id": 9
+    },
+    {
+      "title": "dfgdfgdfgdf dfgdfg",
+      "body": "dfgfdgdfgdfgdf dfgdfgfdg",
+      "tags": [
+        "ddd"
+      ],
+      "id": 10
+    },
+    {
+      "title": "adsasdasd asdasd",
+      "body": "asdasdas dadfdfgg dfdgdfg",
+      "tags": [
+        "fff",
+        "sddsgf"
+      ],
+      "id": 11
+    }
+  ]
 }

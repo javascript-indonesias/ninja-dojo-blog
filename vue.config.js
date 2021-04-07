@@ -8,7 +8,7 @@ module.exports = {
             const argumentwebpack = args;
             argumentwebpack[0].scriptLoading = 'defer';
             argumentwebpack[0].hash = true;
-            argumentwebpack[0].title = 'Ninja Project Planner';
+            argumentwebpack[0].title = 'Vue Blog Ninja';
             return argumentwebpack;
         });
     },
