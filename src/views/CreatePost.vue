@@ -35,6 +35,9 @@
             <button>Kirim Blog Post</button>
         </form>
     </div>
+    <div v-if="">
+        Gagal mengirim postingan blog terbaru
+    </div>
 </template>
 
 <script>
@@ -70,7 +73,7 @@ export default {
             };
 
             // Kirim data ke server, dengan Composables
-            // Composition API
+            // Composition API async await
             await sendBlogPost(postData);
 
             if (isRequestSucceed.value) {

@@ -16,6 +16,7 @@ const postCreateBlog = () => {
 
             if (response.status >= 200 && response.status <= 205) {
                 isRequestSucceed.value = true;
+                errorReq.value = null;
             } else {
                 isRequestSucceed.value = false;
                 throw new Error(`Error request data ${response.status}`);
