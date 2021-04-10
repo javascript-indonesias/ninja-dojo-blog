@@ -29,6 +29,25 @@
         "webdev",
         "coding"
       ]
+    },
+    {
+      "title": "Belajar HTML5 Tingkat Dasar",
+      "body": "Belajar menggunakan blog dan HTML5 tingkat dasar",
+      "tags": [
+        "blog",
+        "html5",
+        "latihandasar"
+      ],
+      "id": 4
+    },
+    {
+      "title": "Belajar Node JS",
+      "body": "Belajar Node JS dan content blog yang ada di dalamnya",
+      "tags": [
+        "nodejs",
+        "javascript"
+      ],
+      "id": 5
     }
   ]
 }

@@ -42,6 +42,7 @@
 
 <script>
 import { ref } from 'vue';
+import { useRouter } from 'vue-router';
 import postCreateBlog from '../composables/postCreateBlog';
 
 export default {
@@ -51,6 +52,8 @@ export default {
         const stringBody = ref('');
         const stringTag = ref('');
         const listTags = ref([]);
+
+        const router = useRouter();
 
         const { isRequestSucceed, errorReq, sendBlogPost } = postCreateBlog();
 
@@ -77,7 +80,9 @@ export default {
             await sendBlogPost(postData);
 
             if (isRequestSucceed.value) {
+                // navigasi ke halaman utama dengan home router
                 console.log('Request telah sukses');
+                router.push({ name: 'HomeBlog' });
             } else {
                 console.log(`Terjadi error request ${errorReq.value}`);
             }
