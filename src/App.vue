@@ -6,7 +6,7 @@
 #app {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    text-align: center;
+    // text-align: center;
     margin: 0 auto;
     color: #2c3e50;
 }

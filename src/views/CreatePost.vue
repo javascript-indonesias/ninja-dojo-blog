@@ -35,7 +35,7 @@
             <button>Kirim Blog Post</button>
         </form>
     </div>
-    <div v-if="">
+    <div v-if="errorReq">
         Gagal mengirim postingan blog terbaru
     </div>
 </template>
