@@ -11,6 +11,7 @@
 
 <script>
 import { onMounted, defineAsyncComponent } from 'vue';
+import { useRoute } from 'vue-router';
 import getPostDetail from '../composables/getPostDetail';
 
 const SpinnerComponent = defineAsyncComponent(() => import('../components/Spinner.vue'));
@@ -26,6 +27,11 @@ export default {
         spinner: SpinnerComponent,
     },
     setup(props) {
+        const route = useRoute();
+        console.log(route);
+        const propsId = route.params.id;
+
+        console.log('Post id', propsId);
         const { getSinglePost, post, errorReq } = getPostDetail(props.id);
 
         onMounted(() => {
