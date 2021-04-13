@@ -2,8 +2,9 @@
     <div class="home">
         <h1>Home</h1>
         <div class="error" v-if="errorReq">{{ errorReq }}</div>
-        <div v-if="posts.length > 0">
+        <div v-if="posts.length > 0" class="layout">
             <post-list :posts="posts" v-if="isPostShow"></post-list>
+            <tagscloud-view :posts="posts"></tagscloud-view>
         </div>
         <div v-else>
             <spinners></spinners>
@@ -26,11 +27,14 @@ const PostListComponent = defineAsyncComponent(() => import('../components/PostL
 
 const SpinnerComponent = defineAsyncComponent(() => import('../components/Spinner.vue'));
 
+const TagCloudComponent = defineAsyncComponent(() => import('../components/TagCloud.vue'));
+
 export default {
     name: 'PropsComposition',
     components: {
         'post-list': PostListComponent,
         spinners: SpinnerComponent,
+        'tagscloud-view': TagCloudComponent,
     },
     setup() {
         const isPostShow = ref(true);
@@ -60,5 +64,11 @@ export default {
     max-width: 1200px;
     margin: 0 auto;
     padding: 10px;
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 20px;
 }
 </style>

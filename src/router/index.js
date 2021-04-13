@@ -44,6 +44,7 @@ const routes = [
         path: '/tags/:tag',
         name: 'TagView',
         component: TagComponent,
+        props: true,
     },
     {
         path: '/homepages',
