@@ -21,6 +21,8 @@ const DetailBlogComponent = () =>
 
 const CreatePostComponent = () => import('../views/CreatePost.vue');
 
+const TagComponent = () => import('../views/TagView.vue');
+
 const routes = [
     {
         path: '/',
@@ -37,6 +39,11 @@ const routes = [
         path: '/create',
         name: 'CreatePost',
         component: CreatePostComponent,
+    },
+    {
+        path: '/tags/:tag',
+        name: 'TagView',
+        component: TagComponent,
     },
     {
         path: '/homepages',

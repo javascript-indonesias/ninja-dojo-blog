@@ -23,6 +23,7 @@ const getPostsData = () => {
             if (response.status === 200) {
                 const datajson = await response.json();
                 console.log(datajson);
+                errorReq.value = null;
                 posts.value = datajson;
             } else {
                 throw new Error(`Data tidak tersedia ${response.status}`);
