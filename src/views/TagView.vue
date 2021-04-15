@@ -43,6 +43,7 @@ export default {
         const { tag: stringTag } = toRefs(props);
         const { getDataBlog, posts, errorReq } = getPostData();
 
+        //  Dapat menggunakan refs dari props atau dari param router
         const listPostWithTag = computed(() => {
             const filteredPost = posts.value.filter((postItem) => {
                 return postItem.tags.includes(stringTag.value);
@@ -70,5 +71,11 @@ export default {
     max-width: 1200px;
     margin: 0 auto;
     padding: 10px;
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 20px;
 }
 </style>
